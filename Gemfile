@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use postgresql as the database for Active Record
-#gem 'pg', '~> 0.18'
+gem 'pg', '~> 0.18'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+#gem 'mysql2', '>= 0.3.18', '< 0.5'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -22,7 +22,7 @@ gem 'active_model_serializers'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CYORS), making cross-origin AJAX possible
 gem 'rack-cors'
 gem 'jwt'  
 gem 'figaro'
