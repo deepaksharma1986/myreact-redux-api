@@ -13,7 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20160908195147) do
 
-  create_table "cat_hobbies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "cat_hobbies", force: :cascade do |t|
     t.integer  "cat_id"
     t.integer  "hobby_id"
     t.datetime "created_at", null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160908195147) do
     t.index ["hobby_id"], name: "index_cat_hobbies_on_hobby_id", using: :btree
   end
 
-  create_table "cats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "cats", force: :cascade do |t|
     t.string   "name"
     t.string   "breed"
     t.string   "weight"
@@ -31,13 +34,13 @@ ActiveRecord::Schema.define(version: 20160908195147) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "hobbies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "hobbies", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
